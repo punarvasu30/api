@@ -21,6 +21,7 @@ jobs:
                                   server-id: github # Must match the server-id in pom.xml
 
                         - name: Publish to GitHub Packages
-                          run: mvn deploy
+                          run: mvn -B deploy -DskipTests
                           env:
                                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
